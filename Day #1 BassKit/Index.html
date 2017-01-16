@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. I made my own twist on the Day1 Project-->
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<title>Day #1 - Basskit</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Sid's Web Basskit</h1>
+	</header>
+	
+	<div class = "keys">	
+		<div data-key="87" class = "key">
+			<kbd>W</kbd>
+			<span class ="sound">F1</span>
+		</div>
+
+		<div data-key = "83" class = "key">
+			<kbd>S</kbd>
+			<span class = "sound">C4</span>
+		</div>
+
+		<div data-key = "65" class = "key">
+			<kbd>A</kbd>
+			<span class = "sound">36-C2</span>
+		</div>
+
+		<div data-key = "68" class = "key">
+			<kbd>D</kbd>
+			<span class = "sound">36-A2</span>
+		</div>
+
+		<div data-key = "73" class = "key">
+			<kbd>I</kbd>
+			<span class = "sound">36-A3</span>
+		</div>
+
+		<div data-key = "75" class = "key">
+			<kbd>K</kbd>
+			<span class = "sound">45-C2</span>
+		</div>
+
+		<div data-key = "74" class = "key">
+			<kbd>J</kbd>
+			<span class = "sound">45-A2</span>
+		</div>
+
+		<div data-key = "76" class = "key">
+			<kbd>L</kbd>
+			<span class = "sound">45-C4</span>
+		</div>
+
+	</div>
+
+	<audio data-key="87" src="bass/F1.wav"></audio>
+	<audio data-key="83" src="bass/C4.wav"></audio>
+	<audio data-key="65" src="bass/36C2.wav"></audio>
+	<audio data-key="68" src="bass/36A2.wav"></audio>
+	<audio data-key="73" src="bass/36A3.wav"></audio>
+	<audio data-key="75" src="bass/45C2.wav"></audio>
+	<audio data-key="74" src="bass/45A2.wav"></audio>
+	<audio data-key="76" src="bass/45C4.wav"></audio>
+
+<script>
+
+  function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+  }
+
+  function playBass(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    if (!audio) return;
+
+    key.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  const keys = Array.from(document.querySelectorAll('.key'));
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playBass);
+
+</script>	
+</body>
+</html>
