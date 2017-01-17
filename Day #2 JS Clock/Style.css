@@ -1,0 +1,75 @@
+html{
+		background: url(http://i.imgur.com/rCpTYco.jpg);
+		background-size: 1920px 1200px;
+		text-align: center;
+}
+
+header{
+			padding-left: 5rem;
+			color: #277ABA;
+			font-size: 3rem;
+			font-family: 'Covered By Your Grace', cursive;
+}
+
+body{
+      	font-size: 2rem;
+      	display:flex;
+      	flex:1;
+      	min-height: 100vh;
+      	align-items: center;
+}
+
+.clock{
+      	width: 30rem;
+      	height: 30rem;
+      	border:10px solid white;
+      	border-radius:50%;
+      	margin:50px auto;
+      	position: relative;
+      	padding:4rem;
+      	box-shadow: 0 0 0 4px rgba(0,0,0,0.1), inset 0 0 0 3px #000000, inset 0 0 10px black, 0 0 10px rgba(0,0,0,0.2);
+}
+
+.face{
+      	position: relative;
+      	width: 100%;
+      	height: 100%;
+      	transform: translateY(-3px); 
+}
+
+.hourHand{
+			width: 49.5%;
+			height: 12px;
+			background: #654597;
+			position: absolute;
+			top: 50%;
+			transform-origin: 100%;
+			transform: rotate(90deg);
+			transition: all 0.05s;
+			transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+
+.minuteHand{
+				width: 50%;
+				height: 4px;
+				background: black;
+				position: absolute;
+				top: 50%;
+				transform-origin: 100%;
+				transform: rotate(90deg);
+				transition: all 0.05s;
+				transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.secondHand{
+			 	width: 50%;
+				height: 3px;
+				background: red;
+				position: absolute;
+				top: 50%;
+				transform-origin: 100%;
+				transform: rotate(90deg);
+				transition: all 0.05s;
+				transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
