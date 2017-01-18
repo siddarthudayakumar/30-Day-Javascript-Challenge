@@ -1,0 +1,60 @@
+
+:root{
+	--base: #BB4430;
+	--spacing: 10px;
+	--blur: 10px;
+}
+
+img{
+	padding: var(--spacing);
+	background: var(--base);
+	filter:blur(var(--blur));
+	width: 1500px;
+	height: 720px;
+}
+
+.highlight{
+	color: var(--base);
+}
+
+/*
+* Usual CSS Styling 
+*/
+
+body{
+	text-align: center;
+	background: #161925;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 50;
+	font-size: 25px;
+}
+
+header{
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+}
+
+.subs{
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+	text-align: center;	
+	color: #FDFFFC;
+}
+
+input{
+	width: 100px;
+	margin-top: 20px;
+	padding-right: 5px;
+}
+
+.controllers{
+	margin-bottom: 70px;
+	color: #FFFFFF;
+	padding-right: 10px;
+}
+
+footer{
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	color: #FDFFFC;
+}
