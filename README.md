@@ -12,4 +12,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   I have changed the Folder names so that they do not have spaces. This allows the HTML and CSS files to be easily accessed through modern browsers
   --Update--
   
-  * Day #4 (1/19/17) - 
+  * Day #4 (1/19/17) - A simple project that deals with Array manipulation using Javascript. Not a lot of CSS work here.
+  * Day #5 (1/20/17) -
