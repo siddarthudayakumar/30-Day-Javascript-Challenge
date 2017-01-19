@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day4 project. Just a little styling-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+	<title>Day #4 - Array Operations with JS</title>
+</head>
+
+<body>
+	<ul class="hintIcon"> 
+		<li class="fa fa-exclamation"></li>
+	</ul>	
+	<p class="Hint">Hint: Check the Chrome/Opera Console to see how the script works</p>
+
+	<footer>
+		Siddarth Udayakumar. Day 4 Project
+	</footer>
+</body>
+
+<script type="text/javascript">
+	//Array data
+	const superheroes = [
+		{first_name: 'Bruce', last_name: 'Wayne', Year: 1879, passed: 1955},
+		{first_name: 'Clark', last_name: 'Kent', Year: 1880, passed: 1960},
+		{first_name: 'Diana', last_name: 'Prince', Year: 1878, passed: 1965},
+		{first_name: 'Barry', last_name: 'Allen', Year: 1882, passed: 1958},
+		{first_name: 'Arthur', last_name: 'Curry', Year: 1878, passed: 1963},
+		{first_name: 'Hal', last_name: 'Jordan', Year: 1882, passed: 1970},
+		{first_name: 'Victor', last_name: 'Stone', Year: 1892, passed: 1997},
+		{first_name: 'Billy', last_name: 'Batson', Year: 1910, passed: 1997},
+	];
+
+	const people = ['Wayne, Bruce', 'Kent, Clark', 'Prince, Diana', 'Jordan, Hal', 'Allen, Barry', 'Curry, Arthur', 'Stone, Victor',
+					'Batson, Billy', 'West, Wally', 'Wayne, Damien', 'Grayson, Dick', 'Drake, Tim', 'Todd, Jason', 'Gordon, Barbara',
+					'Cain, Cassandra', 'Brown, Stephanie', 'Kane, Kate', 'Gordon, Jim', 'Pennyworth, Alfred', 'Fox, Luke', 'Fox, Lucius',
+					'Valley, JeanPaul', 'Montoya, Renee', 'Queen, Oliver', 'Lance, Dinah', 'Kent, Jonathan', 'Harper, Roy'];
+
+	//Here is where our scripting starts
+
+	//Initial list of array
+	console.table(superheroes);
+	console.log(superheroes);
+
+	//List of heroes born before 1880 (Array Filter)
+	const heroList = superheroes.filter(hero => (hero.Year < 1880));
+	console.table(heroList);
+	console.log(heroList);
+
+	//Array of Superhero first and last names(Array Map)
+	const heroNames = superheroes.map(hero => `${hero.first_name} ${hero.last_name}`);
+	console.log(heroNames);
+
+	//Sort heroes by birthdate from oldest to youngest(Array Sort)
+	const sortedAge = superheroes.sort((a, b) => a.Year > b.Year ? 1 : -1);
+	console.table(sortedAge);
+	console.log(sortedAge);
+
+	//Lifetime of Heroes (Array Reduce)
+	const lifeTime = superheroes.reduce((total, hero) => {return total + (hero.passed - hero.Year);}, 0);
+	console.log(lifeTime);
+
+	//Sort heroes by lifetime
+	const oldHero = superheroes.sort(function(a, b) {
+		const lastHero = a.passed - a.Year;
+		const nextHero = b.passed - b.Year;
+		return lastHero > nextHero ? -1 : 1;
+	});
+	console.table(oldHero);
+	console.log(oldHero);
+
+	//Sort Heroes by LastName
+	const lastSort = people.sort((lastPerson, nextPerson) => {
+		const [aLast, AFirst] = lastPerson.split(', ');
+		const [bLast, bFirst] = nextPerson.split(', ');
+		return aLast > bLast ? 1 : -1;
+	});
+	console.log(lastSort);
+
+	//Sum up each of the instances
+	const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+	const vehicles = data.reduce(function(obj, item){
+		if (!obj[item]) {
+			obj[item] = 0;
+		}
+		obj[item]++;
+		return obj;
+	}, {});
+	console.log(vehicles);
+	
+</script>
+
+</html>
