@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day5 project. Flex Panels with a lot of CSS-->
+	<!--Credits to www.goseetalk.com for the Avenger Images.-->
+	<!--Avengers Property is copyrighted by Marvel but I had way too much fun working on this. Pays to be a comic fan-->
+	<!--Ahh! I can't be biased. Will created one for The Justice League tomorrow. Of course, its going to be based on the DCEU-->
+	<title>Day #5 - Flex Panels (The Avengers) </title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h2>The Avengers</h2>
+	</header>
+
+	<div class="panels">
+		<div class="panel panel1">
+			<p>The Asgardian</p>
+			<p>Thor</p>
+			<p>Thor Odinson</p>
+		</div>
+
+		<div class="panel panel2">
+			<p>The Archer</p>
+			<p>Hawkeye</p>
+			<p>Clint Barton</p>
+		</div>
+
+		<div class="panel panel3">
+			<p>The First Avenger</p>
+			<p>Captain America</p>
+			<p>Steven Rogers</p>
+		</div>
+
+		<div class="panel panel4">
+			<p>The Inventor</p>
+			<p>Iron Man</p>
+			<p>Tony Stark</p>
+		</div>
+
+		<div class="panel panel5">
+			<p>The Spy</p>
+			<p>Black Widow</p>
+			<p>Natasha Romanoff</p>
+		</div>
+
+		<div class="panel panel6">
+			<p>The Tank</p>
+			<p>Hulk</p>
+			<p>Bruce Banner</p>
+		</div>
+	</div>
+
+	<footer>The Day#5 Project.</footer>
+
+	<script type="text/javascript">
+		const panels = document.querySelectorAll('.panel');
+
+		function toggleOpen(){
+			console.log('hello');
+			this.classList.toggle('open');
+		}	
+
+		function toggleActive(e){
+			console.log(e.propertyName);
+			if (e.propertyName.includes('flex')) {
+				this.classList.toggle('open-active');
+			}
+		}
+
+		panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+		panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+	</script>
+
+</body>
+</html>
