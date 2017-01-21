@@ -15,4 +15,6 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #4 (1/19/17) - A simple project that deals with Array manipulation using Javascript. Not a lot of CSS work here.
   * Day #5 (1/20/17) - A web page that explores the Flex property in CSS. As a comics fan, I made something for The Avengers with minimalist posters from the Web.
                        Got to create a similar one for The justice League.
+  * Day #5.1 (1/21/17) - I did say I would create a similar one for The Justice League and I created it. This one is based off the Timm-Verse. Overflow Probem persists.
+                         Might have to edit it out. 
   * Day #6 (1/23/17) - Pushed the project to Monday as I have a lot on my plate today :) 
