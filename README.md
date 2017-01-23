@@ -17,4 +17,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
                        Got to create a similar one for The justice League.
   * Day #5.1 (1/21/17) - I did say I would create a similar one for The Justice League and I created it. This one is based off the Timm-Verse. Overflow Probem persists.
                          Might have to edit it out. 
-  * Day #6 (1/23/17) - Pushed the project to Monday as I have a lot on my plate today :) 
+  * Day #6 (1/23/17) - A simple Search demo using JS and Regular Expressions with AJAX. Might reformat this a bit. 
+  * Day #7 (1/24/17) - 
