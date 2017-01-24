@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day7 project. Just a little styling-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+	<title>Day #7 - Array Operations with JS - Part II</title>
+</head>
+
+<body>
+	
+	<ul class="hintIcon"> 
+		<li class="fa fa-exclamation"></li>
+	</ul>	
+	<p class="Hint">Hint: Check the Chrome/Opera Console to see how the script works</p>
+
+	<footer>
+		Siddarth Udayakumar. Day 7 Project
+	</footer>
+
+	<script type="text/javascript">
+		
+	const movies = [
+		{movie: 'Jurassic Park', year: 1993 },
+		{movie: 'Jaws', year: 1975},
+		{movie: 'Real Steel', year: 2011},
+		{movie: 'The Secret Life of Walter Mitty', year: 2013},
+		{movie: 'The Lion King', year: 1994},
+		{movie: 'Civil War', year: 2016},
+		{movie: 'Dawn of Justice', year: 2016},
+		{movie: 'Suicide Squad', year: 2016}
+	];
+
+	const reviews = [
+		{comment: 'Instant Classic!', id: 920121},
+		{comment: 'dun dun dun', id: 198271},
+		{comment: 'Rocky, with Robots!', id: 654667},
+		{comment: 'Motivates me!', id: 182911},
+		{comment: 'Still my favorite!', id: 902100},
+		{comment: 'Slow but Nerdgasm', id: 912821},
+		{comment: 'Good! could have been better', id: 858271},
+		{comment: 'Meh', id: 102911},
+	];
+
+	//Some and Every Checks
+	//Check if at least one of the movies is over 20 years old.
+	const doubleDecade = movies.some(function(movie) {
+		const presentYear = (new Date()).getFullYear();
+		if (presentYear - movie.year >= 20) {
+			return true;
+		}
+	});
+
+	console.log(doubleDecade);
+	//Alternate Method
+	//const doubleDecade = movies.some(movie => ((new Date()).getFullYear()) - movie.year >= 20);
+	//console.log(doubleDecade);
+
+	//Check if all movies are over 20 years old. 
+	const doubleDecadeAll = movies.every(movie => ((new Date()).getFullYear()) - movie.year >= 20);
+	console.log(doubleDecadeAll);	
+
+	//Array Find
+	//Find gives the exact output we are looking for. So like filter but with specificity for what we are looking for.
+	//Find the review for Suicide Squad with id 102911
+	const movieReview = reviews.find(review => review.id === 102911);
+	console.log(movieReview);
+
+	//Array FindIndex
+	//Find the exact review with this ID.
+	//Remove the review for Jaws with id 198271
+	 const reviewID = reviews.findIndex(review => review.id === 198271);
+	 console.log(reviewID);
+	 reviews.splice(reviewID, 1);
+
+	</script>
+</body>
+</html>
