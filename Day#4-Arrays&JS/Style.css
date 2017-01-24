@@ -7,7 +7,7 @@ footer{
 	font-size: 20px; 
 	color: #EFF0D1;
 	text-align: left;
-	margin-top: 15em;
+	margin-top: 450px;
 }
 
 .Hint{
@@ -27,7 +27,7 @@ ul.hintIcon li:before{
 	color: #000000;
 	display: block;
 	height: 2.5em;
-	margin-left: 45em;
+	margin-left: 55em;
 	margin-top:15em;
 	line-height: 2.5em;
 	text-align: center;
