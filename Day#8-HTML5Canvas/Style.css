@@ -1,0 +1,30 @@
+body{
+	background: #E8E7E9;
+}
+
+header{
+	font-family: 'Just Me Again Down Here', cursive;
+	font-size: 50px;
+	text-align: center;
+	color: ##0B0014
+}
+
+.headText{
+	font-family: 'Just Me Again Down Here', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: ##0B0014
+	margin-bottom:15px;
+}
+
+.htmlcanvas{
+	margin-left: 30px;
+	background-color: #FFFFFF;
+}
+
+footer{
+	font-family: 'Just Me Again Down Here', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: ##0B0014
+}

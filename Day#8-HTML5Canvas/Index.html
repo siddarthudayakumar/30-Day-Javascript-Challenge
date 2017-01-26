@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here" rel="stylesheet">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day8 project. Just a little styling-->
+	<title>Day #8 - HTML Canvas</title>
+</head>
+<body>
+
+<header>
+	<h1>Neo Bob Ross Simulator</h1>
+	<p class="headText">Create your own happy little accident | Click Anywhere and Start drawing</p>
+</header>
+
+<canvas id = "htmlcanvas" width="1890" height="700"></canvas>
+
+<script type="text/javascript">
+	
+	const canvas = document.querySelector('#htmlcanvas');
+	//So we do not draw on the canvas but rather, draw on the context.	
+	const conx = canvas.getContext('2d'); //allows for drawing in 2D.
+	conx.strokeStyle = '#88D9E6';
+	conx.lineJoin = 'round';
+	conx.lineCap = 'round';
+	conx.lineWidth = 60;
+
+	//Setting Initial States
+	let isDraw = false; 
+	let lastX = 0;
+	let lastY = 0;
+	let hue = 0;
+	let direction = true;
+
+	//The actual drawing function
+	function draw(e) {
+		if (!isDraw) return;
+		//console.log(e);
+		conx.strokeStyle = `hsl(${hue}, 100%, 50%`;
+		conx.beginPath();
+		//Setting Initial Starting Point
+		conx.moveTo(lastX, lastY);
+		//Move from current point to
+		conx.lineTo(e.offsetX, e.offsetY);
+		conx.stroke();
+		[lastX, lastY] = [e.offsetX, e.offsetY]; //ES6 script
+		
+		//Modifying the Color Property
+		hue++;
+		if (hue >= 360) {
+			hue = 0;
+			//resetting color to 0 after it crosses one cycle.
+		}
+		if (conx.lineWidth >= 60 || conx.lineWidth <= 1) {
+			direction = !direction;
+			//resetting the width.
+		}
+		if (direction) {
+			conx.lineWidth++;
+		}
+		else {
+			conx.lineWidth--;
+		}
+	}
+		
+	canvas.addEventListener('mousedown', (e) => {
+		isDraw = true;
+		[lastX, lastY] = [e.offsetX, e.offsetY]; //same ES6 script
+	});
+
+	canvas.addEventListener('mousemove', draw);
+	canvas.addEventListener('mouseup', () => isDraw = false);
+	canvas.addEventListener('mouseout', () => isDraw = false);
+
+</script>
+
+<footer>
+	Day#8 Project. 
+</footer>
+
+</body>
+</html>
