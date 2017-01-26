@@ -1,0 +1,42 @@
+body{
+	background: #262730
+}
+
+.exam{
+	font-family: 'Reenie Beanie', cursive;
+	text-align: center;
+	font-size: 50px;
+	color: #FFFFFF
+}
+
+footer{
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 20px; 
+	color: #EFF0D1;
+	text-align: left;
+	margin-top: 450px;
+}
+
+.Hint{
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 50px; 
+	color: #EFF0D1;
+	text-align: center;
+}
+
+ul.hintIcon{
+	list-style: none;
+}
+
+ul.hintIcon li:before{
+	background: #EFF0D1;
+	border-radius: 200%;
+	color: #000000;
+	display: block;
+	height: 2.5em;
+	margin-left: 55em;
+	margin-top:15em;
+	line-height: 2.5em;
+	text-align: center;
+	width: 2.5em;
+}

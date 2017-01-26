@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day8 project. Just a little styling-->
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+	<title>Day #9 - Console Command Center</title>
+</head>
+
+<body>
+	
+	<ul class="hintIcon"> 
+		<li class="fa fa-exclamation"></li>
+	</ul>	
+	<p class="Hint">Hint: Check the Chrome/Opera Console to see how the script works</p>
+	<p class="Hint"> Also Check the code for the corressponding console commands. </p>
+	<p class="exam" onClick="changeColor()"> Click me to change color </p>
+
+	<footer>
+		Siddarth Udayakumar. Day 9 Project
+	</footer>
+
+	<script type="text/javascript">
+		
+		const RLCars = [{name: 'Dominus', fav: 3}, {name: 'Octane ZSR', fav: 3}, {name: 'Breakout', fav: 4}];
+
+		function changeColor(){
+			const para = document.querySelector('.exam'); 
+			para.style.color = '#EF8354';
+		}
+
+		//usual Console logs
+		console.log('This is the usual console log.');
+
+		//Reference or Interpolated
+		console.log('This is the %s console log.', 'usual');
+
+		//Stylized Console logs
+		console.log ('%c This is the stylized console log', 'background:blue');
+
+		//Console warnings
+		console.warn ('Oh noes! This is a warning!');
+
+		//Console Errors
+		console.error('Welp! This is an error');
+
+		//Console Information
+		console.info('lobsters do not donate money because they are shellfish.');
+		console.log('badumm tss!');
+		console.log('*anguished sighs*')
+		console.warn('The next lame joke will cause this browser to explode');
+
+		//Console Check or Test
+		const p = document.querySelector('p');
+		console.assert(p.classList.contains('oops'), 'This does not compute!');
+
+		//Clearing the Console
+		//console.clear();
+
+		//View DOM elements
+		console.log(p);
+		console.dir(p);
+
+		//console.clear();
+
+		//Grouping elements
+		RLCars.forEach(car => {
+			console.groupCollapsed(`${car.name}`);
+			console.log(`This is ${car.name}`);
+			console.log(`${car.name} is fav of ${car.fav} people`);
+			console.groupEnd(`${car.name}`);
+		});
+
+		//Counting in Console
+		console.count('Sid');
+		console.count('Sid');
+		console.count('Sid');
+		console.count('Sid');
+		console.count('Lame jokes');
+		console.count('Lame jokes');
+		console.count('Lame jokes');
+		console.count('Sid');
+		console.count('Sid');
+
+		console.table(RLCars);
+
+	</script>
+</body>
+</html>
