@@ -21,3 +21,4 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #7 (1/24/17) - A simple project that deals with Array manipulation using Javascript. Not a lot of CSS work here. Part II of the earlier Day #4 project.
   * Day #8 (1/25/17) - A Simple HTML Canvas with draw function using JS. 
   * Day #9 (1/26/17) - A simple HTML page with nifty console commands. Ignore lame joke in console. 
+  * Day #10 (1/27/17) - A static Checkbox/To Do list with multiple selections using Javascript.
