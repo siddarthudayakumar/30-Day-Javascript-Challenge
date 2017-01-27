@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day10 project. Just a little styling-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Unica+One" rel="stylesheet">
+	<title>Day #10 - To Do Checklist</title>
+</head>
+
+<body>
+
+	<header>
+		<h2>Sid's Checklist for Today</h2>
+	</header>
+
+	<p class="info">Hold down the shift key to check multiple tasks</p>
+
+	<div class="toDo">
+		<div class="task">
+			<input type="checkbox">
+				<p class="works">Work on my Javascript Challenge</p>
+		</div>
+		<div class="task">
+			<input type="checkbox">
+				<p class="works">Upload work done to Github</p>
+		</div>
+		<div class="task">
+			<input type="checkbox">
+				<p class="works">Play some Rocket League</p>
+		</div>
+		<div class="task">
+			<input type="checkbox">
+				<p class="works">Work on Algorithms and Data Structures</p>
+		</div>
+		<div class="task">
+			<input type="checkbox">
+				<p class="works">Head to Gym</p>
+		</div>
+		<div class="task">
+			<input type="checkbox">
+				<p class="works">Finish other tasks</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	//Regular Checkbox styles. No Shift Key Action 
+	/*	const tickBox = document.querySelectorAll('.toDo input[type="checkbox"]');
+		function addTick(e){
+			console.log(e);
+		}	
+		tickBox.forEach(checkbox => checkbox.addEventListener('click', addTick));
+	*/
+
+	//Checkbox action where shift key allows for multiple selection of checkboxes. Like in Gmail.
+	const tickBox = document.querySelectorAll('.toDo input[type="checkbox"]');
+	let lastTicked;
+	function addTick(e){
+		let middleTasks = false;
+		if (e.shiftKey && this.checked) {
+			//Using a for loop to check all the checkboxes
+			tickBox.forEach(checkbox => {
+				console.log(checkbox);
+				if (checkbox === this || checkbox === lastTicked) {
+					middleTasks = !middleTasks;
+				}
+				if (middleTasks) {
+					checkbox.checked = true;
+				}
+			});
+		} 
+		lastTicked = this;
+	}
+
+	tickBox.forEach(checkbox => checkbox.addEventListener('click', addTick));
+
+	</script>
+
+	<footer>
+		<p>Day 10 Project</p>	
+	</footer>
+
+</body>
+
+</html>
