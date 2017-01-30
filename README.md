@@ -22,5 +22,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #8 (1/25/17) - A Simple HTML Canvas with draw function using JS. 
   * Day #9 (1/26/17) - A simple HTML page with nifty console commands. Ignore lame joke in console. 
   * Day #10 (1/27/17) - A static Checkbox/To Do list with multiple selections using Javascript.
-  * Day #11 (1/30/17) - A custom HTMl 5 video player with pretty heavy CSS code. I had to follow the tutorial resource for the CSS. 
+  * Day #11 (1/30/17) - A custom HTML 5 video player with pretty heavy CSS code. I had to follow the tutorial resource for the CSS. 
   * Day #12 (1/31/17) -
