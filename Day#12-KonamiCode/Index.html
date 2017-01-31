@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day12 project. Just a little styling-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+	<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+	<title>Day #12 - Konami Code Sequence</title>
+</head>
+
+<body>
+	
+	<header>
+		<h2>Key Sequences</h2>
+	</header>
+
+	<p class="info">
+			* Type out the key sequence<br/>
+			* Hint: What I'm usually called<br/>
+			* Hint: Check the console to see logs<br/>
+	</p>
+
+	<script type="text/javascript">
+		const kPressed = []; //created an Array to store keys
+		const KonamiCode = 'siddarth';
+		window.addEventListener('keyup', (e) => {
+			console.log(e.key);
+			console.log('name pls');
+			kPressed.push(e.key);
+			kPressed.splice(-KonamiCode.length - 1 , kPressed.length - KonamiCode.length);
+			if (kPressed.join('').includes(KonamiCode)) {
+				console.log('Look at that, you figured it out!');
+				cornify_add();
+			}
+			console.log(kPressed);
+		});
+	</script>
+
+	<footer>
+		Day #12 Project.
+	</footer>
+
+</body>
+
+</html>

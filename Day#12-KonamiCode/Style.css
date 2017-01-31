@@ -1,0 +1,25 @@
+html{
+	background: #F4D35E;
+}
+
+header{
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Shadows Into Light Two', cursive;
+	color: #1F271B;
+}
+
+.info{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Shadows Into Light Two', cursive;
+	color: #1F271B;
+}
+
+footer{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Shadows Into Light Two', cursive;
+	color: #1F271B;
+	margin-top: 380px;
+}
