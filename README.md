@@ -24,4 +24,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #10 (1/27/17) - A static Checkbox/To Do list with multiple selections using Javascript.
   * Day #11 (1/30/17) - A custom HTML 5 video player with pretty heavy CSS code. I had to follow the tutorial resource for the CSS. 
   * Day #12 (1/31/17) - A simple web page which uses a Konami code like implementation to show easter eggs using JS. 
-  * Day #13 (2/1/17) - 
+  * Day #13 (2/1/17) - A web page which showcases a slide in image animation. I created it like a travel blog. Pictures used are my own photos from my travels.
+  * Day #14 (2/2/17) -
