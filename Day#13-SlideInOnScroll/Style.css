@@ -1,0 +1,62 @@
+html{
+	box-sizing: border-box;
+	background: #4ECDC4;
+	font-family: 'Caveat', cursive;
+	font-size: 20px;
+	font-weight: 100;
+}
+
+body{
+	margin: 0;
+}
+
+h1 {
+	margin-top: 0;
+	font-family: 'Comfortaa', cursive;
+}
+
+footer{
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	font-size: 20px;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+.page{
+	max-width: 700px;
+	margin: 100px auto;
+	background: #F7FFF7;
+	padding: 40px;
+	text-align: justify;
+}
+
+.align-left{
+	float: left;
+	margin-right: 20px;
+}
+
+.align-right{
+	float: right;
+	margin-left: 20px;
+}
+
+.slide-in{
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.align-left.slide-in{
+	transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in{
+	transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active{
+	opacity: 1;
+	transform: translateX(1%) scale(1);
+}
