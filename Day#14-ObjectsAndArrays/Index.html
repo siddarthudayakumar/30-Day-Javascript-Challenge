@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day14 project.-->
+	<!--This Project shows the difference between javascript copy and reference..-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Javascript: Copy Vs Reference</title>
+</head>
+	
+<body>
+	
+	<header>
+		<h2>Javascript: Copy Vs Reference</h2>	
+	</header>
+
+	<ul class="hintIcon"> 
+		<li class="fa fa-exclamation"></li>
+	</ul>	
+	<p class="Hint">Hint: Check the Chrome/Opera Console to see how the script works</p>
+	<p class="Hint"> Also Check the code for the corressponding console commands. </p>
+
+	<script type="text/javascript">
+
+		//Strings and numbers
+		let number_1 = 10;
+		let number_2 = number_1;
+		console.log(number_1, number_2);
+		number_1 = 20;
+		console.log(number_1, number_2);
+
+		let name_1 = 'Steve';
+		let name_2 = name_1;
+		console.log(name_1, name_2);
+		name_1 = 'Jeff';
+		console.log(name_1, name_2);
+
+		//Switching over to arrays now
+		const team_members = ['Clayface', 'Tim Drake', 'Kate Kane', 'Cassie', 'Stephanie', 'Bruce'];
+		const team = team_members;
+		console.log(team_members, team);
+
+		team[2] = 'Luke Fox'; 
+		team[2] = 'Tim Drake';
+ 
+		//The above statement does not only modify the index 2 of team but also of team_members.
+		//This is because of a reference to the original array.
+
+		const team_2 = team_members.slice(); //Slice allows for copying without affecting original array values.
+		team_2[1] = 'Luke Fox';
+		console.log(team_2); 
+
+		const team_3 = [].concat(team_members); //Creating a new array and subsequent concatenation also works.
+
+		const team_4 = [...team_members]; //ES6 spread also works.
+		team_4[4] = 'Rogue';
+		console.log(team_4)
+
+		const team_5 = Array.from(team_members);
+
+		//The same case is applicable for objects too.
+		const Batman = {
+			name: 'Bruce Wayne',
+			age: 36
+		};
+
+		/*
+		* Rough Copy
+		* const leader = Batman;
+		* leader.number = 55;
+		*/
+
+		//Take an actual copy by Object.assign
+		const leader_2 = Object.assign({}, Batman, {number: 55, age : 55 });
+		console.log(leader_2);
+
+		//Object Assign
+		const Batman_Team = {
+			name: 'Bruce Wayne',
+			age: 36,
+			wards: {
+				Robin : 'Damien Wayne',
+				Red_Hood: 'Jason Todd',
+				Red_Robin: 'Tim Drake',
+				NightWing: 'Dick Grayson'
+			} 
+		};
+
+		//console.clear();
+		console.log(Batman_Team);
+		//Object.assign works only one level deep. To replicate it exactly, we can use Clone Deep
+		const BatJim = Object.assign({}, Batman_Team);
+		//JSON parse and stringify is for a quick and dirty version of clone deep.
+		const Batman_2 = JSON.parse(JSON.stringify(Batman));
+		
+	</script>
+
+	<footer>
+		Siddarth Udayakumar. Day 14 Project
+	</footer>
+
+</body>
+</html>

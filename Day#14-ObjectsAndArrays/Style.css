@@ -1,0 +1,43 @@
+body{
+	background: #BFCDE0;
+}
+
+header{
+	font-family: 'Cutive Mono', monospace;
+	font-size: 20px; 
+	color: #000505;
+	text-align: center;
+	padding-top: 50px;
+}
+
+footer{
+	font-family: 'Cutive Mono', monospace;
+	font-size: 20px; 
+	color: #000505;
+	text-align: center;
+	margin-top: 310px;
+}
+
+.Hint{
+	font-family: 'Cutive Mono', monospace;
+	font-size: 30px; 
+	color: #000505;
+	text-align: center;
+}
+
+ul.hintIcon{
+	list-style: none;
+}
+
+ul.hintIcon li:before{
+	background: #DCE3EE;
+	border-radius: 200%;
+	color: #000000;
+	display: block;
+	height: 2.5em;
+	margin-left: 55em;
+	margin-top:15em;
+	line-height: 2.5em;
+	text-align: center;
+	width: 2.5em;
+}
