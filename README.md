@@ -26,4 +26,4 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #12 (1/31/17) - A simple web page which uses a Konami code like implementation to show easter eggs using JS. 
   * Day #13 (2/1/17) - A web page which showcases a slide in image animation. I created it like a travel blog. Pictures used are my own photos from my travels.
   * Day #14 (2/2/17) - A simple page with console logs to show the difference between reference and copy in Javascript.
-  * Day #15 (2/3/17) - 
+  * Day #15 (2/3/17) - A Checklist Web page that showcases localStorage and How to delegate tasks. 
