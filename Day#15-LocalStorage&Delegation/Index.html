@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day15 project.-->
+	<!--This Project deals with local storage and event delegation-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Ek+Mukta" rel="stylesheet">
+	<title>Day #15 - Local Storage and Event Delegation</title>
+</head>
+
+<body>
+
+	<!--SVG Icon from The Noun Project.-->
+	<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#FFFFFF;enable-background:accumulate;" d="m 50,956.36217 c -25.36957,0 -46,20.63057 -46,46.00003 0,25.3695 20.63044,46 46,46 25.36956,0 46,-20.6305 46,-46 0,-25.36946 -20.63044,-46.00003 -46,-46.00003 z m 0,6 c 22.1269,0 40,17.87323 40,40.00003 0,22.1269 -17.8731,40 -40,40 -22.12692,0 -40,-17.8731 -40,-40 0,-22.1268 17.87309,-40.00003 40,-40.00003 z m 20.9375,15.78125 a 3.0003,3.0003 0 0 0 -1,0.28125 L 40.96875,991.86219 A 3.0003,3.0003 0 0 0 39.5,993.29969 l -13.4375,29.00001 a 3.0003,3.0003 0 0 0 4,4 l 28.96875,-13.4375 A 3.0003,3.0003 0 0 0 60.5,1011.3934 l 13.4375,-28.99998 a 3.0003,3.0003 0 0 0 -3,-4.25 z m -5.875,9.15625 -9.53125,20.56253 -20.59375,9.5312 9.53125,-20.56251 20.59375,-9.53122 z M 50,998.36219 c -1.02369,0 -2.0627,0.3752 -2.84375,1.1562 -1.5621,1.56211 -1.5621,4.12541 0,5.68751 1.5621,1.5621 4.1254,1.5621 5.6875,0 1.5621,-1.5621 1.5621,-4.1254 0,-5.68751 -0.78105,-0.781 -1.82006,-1.1562 -2.84375,-1.1562 z" fill="#FFFFFF" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
+
+	<div class="wrapper">
+		<h2>MY CHECKLIST</h2>
+		<p></p>
+		<ul class="places">
+			<li>Loading places..</li>
+		</ul>
+		<form class="add-places">
+			<input type="text" name="item" placeholder="Place Name" required>
+			<input type="submit" value="+ Add Place">
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		  const addItems = document.querySelector('.add-places');
+		  const itemsList = document.querySelector('.places');
+		  const items = JSON.parse(localStorage.getItem('items')) || [];
+
+		  function addItem(e) {
+		    e.preventDefault();
+		    const text = (this.querySelector('[name=item]')).value;
+		    const item = {
+		      text,
+		      done: false
+		    };
+
+		    items.push(item);
+		    populateList(items, itemsList);
+		    localStorage.setItem('items', JSON.stringify(items));
+		    this.reset();
+		  }
+
+		  function populateList(places = [], placesList) {
+		    placesList.innerHTML = places.map((place, i) => {
+		      return `
+		        <li>
+		          <input type="checkbox" data-index=${i} id="item${i}" ${place.done ? 'checked' : ''} />
+		          <label for="item${i}">${place.text}</label>
+		        </li>
+		      `;
+		    }).join('');
+		  }
+
+		  function toggleDone(e) {
+		    if (!e.target.matches('input')) return; // skip this unless it's an input
+		    const el = e.target;
+		    const index = el.dataset.index;
+		    items[index].done = !items[index].done;
+		    localStorage.setItem('items', JSON.stringify(items));
+		    populateList(items, itemsList);
+		  }
+
+		  addItems.addEventListener('submit', addItem);
+		  itemsList.addEventListener('click', toggleDone);
+
+		  populateList(items, itemsList);
+	</script>
+
+	<footer>
+		Day #15 Project. For the love of travelling.
+	</footer>
+
+</body>
+
+</html>
