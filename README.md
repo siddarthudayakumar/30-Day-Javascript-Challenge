@@ -27,3 +27,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #13 (2/1/17) - A web page which showcases a slide in image animation. I created it like a travel blog. Pictures used are my own photos from my travels.
   * Day #14 (2/2/17) - A simple page with console logs to show the difference between reference and copy in Javascript.
   * Day #15 (2/3/17) - A Checklist Web page that showcases localStorage and How to delegate tasks. 
+  * Day #16 (2/6/17) - A interactive web page that demonstrates mouse shadows with CSS.
+  * Day #17 (2/7/17) - 
