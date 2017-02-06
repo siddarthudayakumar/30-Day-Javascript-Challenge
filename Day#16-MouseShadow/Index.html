@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<title>Day #16 - Mouse Shadow CSS</title>
+</head>
+
+<body>
+	
+	<div class="titleScreen">
+		<h1 contenteditable="">GUARDIANS OF THE GALAXY</h1>
+	</div> 
+
+	<div id="chars">
+		<figure class="cIcon">
+			<img src="http://i.imgur.com/iHc6HJR.png"/>
+			<figcaption class="iCaption">Star Lord</figcaption>
+		</figure>
+		
+		<figure class="cIcon">
+			<img src="http://i.imgur.com/5Q2l2wo.png"/>
+			<figcaption class="iCaption">Gamora</figcaption>
+		</figure>
+
+		<figure class="cIcon">
+			<img src="http://i.imgur.com/lqmLhVr.png"/>
+			<figcaption class="iCaption">Drax</figcaption>
+		</figure>
+
+		<figure class="cIcon">
+			<img src="http://i.imgur.com/Ou8afK6.png"/>
+			<figcaption class="iCaption">Rocket</figcaption>
+		</figure>
+
+		<figure class="cIcon">
+			<img src="http://i.imgur.com/WMw1bPy.png"/>
+			<figcaption class="iCaption">Groot</figcaption>
+		</figure>
+	</div>
+
+	<script type="text/javascript">
+		const titleScreen = document.querySelector('.titleScreen');
+		const name = titleScreen.querySelector('h1');
+		const moves = 500; //100px approx
+
+		function mouseShadow(e) {
+			const { offsetWidth : width, offsetHeight : height} = titleScreen;
+			let {offsetX : x, offsetY : y} = e;
+			if (this !== e.target) {
+				x = x + e.target.offsetLeft;
+				y = y + e.target.offsetTop;
+			}
+
+			const xMoves = Math.round((x / width * moves) - (moves / 2));
+			const yMoves = Math.round((y / height * moves) - (moves / 2));
+			name.style.textShadow = `
+			${xMoves}px ${yMoves}px 0 rgba(255, 0, 255, 0.7),
+			${xMoves * - 1}px ${yMoves}px 0 rgba(0, 255, 255, 0.7),
+			${yMoves}px ${xMoves * - 1}px 0 rgba(0, 255, 0, 0.7),
+			${yMoves * -1}px ${xMoves}px 0 rgba(0, 0, 255, 0.7)
+			`;
+		}
+
+		titleScreen.addEventListener('mousemove', mouseShadow);
+	</script>
+
+</body>
+
+</html>

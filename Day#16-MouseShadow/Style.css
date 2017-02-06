@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'gotg';
+	src: url('Guardians.ttf');
+}
+
+body {
+	background: #2D1E2F;
+	font-family: 'gotg';
+}
+
+h1 {
+	text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.4);
+	font-size: 75px;
+	color:#F7B32B;
+}
+
+ .titleScreen {
+    min-height: 50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.cIcon {
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    align-items: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    background-color: #2D1E2F;
+}
+.iCaption {
+    /* Make the caption a block so it occupies its own line. */
+    display: block;
+    text-align: center;
+    color: #F7B32B;
+}
+
+#chars {
+	margin-top: 50px;
+	margin-left: 370px;
+}
