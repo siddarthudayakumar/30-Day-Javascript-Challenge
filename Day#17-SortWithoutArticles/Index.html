@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day 17 project.-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Special+Elite" rel="stylesheet">
+	<title>Day #17 - Sort Without Articles</title>
+</head>
+
+<body>
+
+	<header>
+		<h2>Movies I love</h2>	
+	</header>
+	
+	<ul id="movies"></ul>
+
+	<script type="text/javascript">
+		const movies = [ 'The Lion King', 'The Dark Knight', 'Real Steel', 'Captain America : Civil War', 'Batman vs Superman: Dawn of Justice',
+						'The Secret life of Walter Mitty', 'A Beautiful Mind', 'Who Framed Roger Rabbit', 'Sherlock Holmes', 'Inception',
+						'Interstellar'
+					   ];
+
+		function strip(movieName) {
+			return movieName.replace(/^(a | the | an)/i, '').trim();
+		}
+
+		const sortedMovies = movies.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+		document.querySelector('#movies').innerHTML = sortedMovies.map(movie => `<li>${movie}</li>`).join('');
+		console.log(sortedMovies);
+
+	</script>
+
+	<p> Check Console and source for initial array of unsorted movies.</p>
+
+</body>
+
+</html>
