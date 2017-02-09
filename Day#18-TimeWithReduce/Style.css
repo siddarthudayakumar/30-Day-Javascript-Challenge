@@ -1,0 +1,20 @@
+body {
+	background: #FCFC62;
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+header {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 50px;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #424242;
+}
+
+footer {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 450px;
+	font-family: 'Julius Sans One', sans-serif;
+	color: #424242;
+}
