@@ -29,4 +29,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #15 (2/3/17) - A Checklist Web page that showcases localStorage and How to delegate tasks. 
   * Day #16 (2/6/17) - A interactive web page that demonstrates mouse shadows with CSS.
   * Day #17 (2/7/17) - A simple page displaying a sorted list of strings that were passed as input in the source code.
-  * Day #18 (2/8/17) - 
+  * Day #18 (2/8/17) - A simple javascript method that adds up the times (of String type) of individual videos in a playlist to show the total time. 
+  * Day #19 (2/9/17) - 
