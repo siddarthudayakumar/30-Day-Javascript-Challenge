@@ -30,4 +30,7 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #16 (2/6/17) - A interactive web page that demonstrates mouse shadows with CSS.
   * Day #17 (2/7/17) - A simple page displaying a sorted list of strings that were passed as input in the source code.
   * Day #18 (2/8/17) - A simple javascript method that adds up the times (of String type) of individual videos in a playlist to show the total time. 
-  * Day #19 (2/9/17) - 
+  --Update--
+  I know, I have not updated the Github for the past two days. Its because I have been a bit busy working on other stuff. I will get the next project working by Monday.
+  --Update--
+  * Day #19 (2/13/17) - 
