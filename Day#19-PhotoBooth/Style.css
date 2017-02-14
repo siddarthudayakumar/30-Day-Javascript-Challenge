@@ -1,0 +1,58 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 12px;
+	background: #40798C;
+}
+
+.booth {
+	background: #CFE0C3;
+	max-width: 150rem;
+	margin: 2rem auto;
+	border-radius: 2px;
+}
+
+/*ClearFix*/
+.booth:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.photo {
+	width: 100%;
+	float: left;
+}
+
+.player {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 200px;
+}
+
+/*Film Roll*/
+
+.filmStrip {
+	padding: 2rem;
+}
+
+.filmStrip img{
+	width: 100px;
+	overflow-x: scroll;
+	padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background: #FFFFFF;
+}
+
+.filmStrip a:nth-child(5n+1) img {rotate: 10deg;}
+.filmStrip a:nth-child(5n+2) img {rotate: -2deg;}
+.filmStrip a:nth-child(5n+3) img {rotate: 8deg;}
+.filmStrip a:nth-child(5n+4) img {rotate: -11deg;}
+.filmStrip a:nth-child(5n+5) img {rotate: 12deg;}

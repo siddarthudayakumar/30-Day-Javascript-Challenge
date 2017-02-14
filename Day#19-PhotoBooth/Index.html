@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day 19 project.-->
+	<!--Okay, this project was challenging to me. I had to rely completely on the video for the JS. It might be slightly different but more or less 
+		a step-by-step procedure of what was in the video since I followed it to the point.-->
+	<!--Package.JSON contains dependency for a localhost secure server that allows the WebCam to be accessed.-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<title>Day #19 - Photobooth</title>
+</head>
+
+<body>
+
+	<div class="booth">
+		<div class="controls">
+			<button onclick="snapPhoto()">Snap!</button>
+		</div>
+
+		<canvas class="photo"></canvas>
+		<video class="player"></video>
+		<div class="filmStrip"></div>
+	</div>
+
+	<audio class="click" src="http://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+
+	<script type="text/javascript" src="Scripts.js"></script>
+
+</body>
+
+</html>
