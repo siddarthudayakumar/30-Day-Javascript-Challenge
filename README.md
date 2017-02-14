@@ -33,4 +33,6 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   --Update--
   I know, I have not updated the Github for the past two days. Its because I have been a bit busy working on other stuff. I will get the next project working by Monday.
   --Update--
-  * Day #19 (2/13/17) - 
+  * Day #19 (2/13/17) - A web application that creates a simple photobooth using Javscript. This required NodeJS to work since a local server was needed. This project took some time and I 
+                        to follow the tutorial step by step to get it working. You still need to run the server to run the application. 
+  * Day #20 (2/14/17)  
