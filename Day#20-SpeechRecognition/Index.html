@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day 20 project.-->
+	<!--Okay, this project was challenging to me. I had to rely completely on the video for the JS. It might be slightly different but more or less 
+		a step-by-step procedure of what was in the video since I followed it to the point.-->
+	<!--Package.JSON contains dependency for a localhost secure server that allows the WebCam to be accessed.-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+	<title>Day #20 - Native Speech Recognition</title>
+</head>
+<body>
+
+	<div class="words" contenteditable=""></div>
+
+	<script type="text/javascript">
+		window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition; //SpeechRecognition is a global variable in the browser. Lives on Window
+		const recognition = new SpeechRecognition(); //instance
+		recognition.interimResults = true; //
+
+		let p = document.createElement('p'); //Creating a paragraph whenever I start speaking.
+		const words = document.querySelector('.words');
+		words.appendChild(p);
+
+		recognition.addEventListener('result', e => {
+			//console.log(e.result); //Testing out the speech recog.
+			const transcript = Array.from(e.results)
+			.map(result => result[0])
+			.map(result => result.transcript).join('');
+			//console.log(transcript);
+
+			if (e.results[0].isFinal) {
+				p = document.createElement('p');
+				words.appendChild(p);
+			}
+			
+		});
+
+		recognition.addEventListener('end', recognition.start);
+		recognition.start();
+
+	</script>
+
+</body>
+</html>
