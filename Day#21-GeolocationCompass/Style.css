@@ -1,0 +1,35 @@
+html {
+	font-size: 100px;
+}
+
+body {
+	font-family: 'Coda', cursive;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #A3A9AA;
+	background-size: 16px 16px;
+	background-position: fixed;
+}
+
+.arrow {
+	width: 250px;
+	overflow: hidden;
+	transition: all 0.2s;
+	transform: rotate(0deg);
+	display: inline-block;
+}
+
+h1 {
+	 color: #FFFFFF;
+	 font-weight: 100;
+	 font-size: 60px;
+	 display: flex;
+	 align-items: center;
+}
+
+.unit {
+	font-size: 15px;
+}
