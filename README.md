@@ -36,4 +36,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #19 (2/13/17) - A web application that creates a simple photobooth using Javscript. This required NodeJS to work since a local server was needed. This project took some time and I 
                         to follow the tutorial step by step to get it working. You still need to run the server to run the application. 
   * Day #20 (2/14/17) - A simple web application that uses native web speech recognition to recognize and display speech as text. To be tested. My Mic doesn't work.
-  * Day #21 (2/15/17) - 
+  * Day #21 (2/15/17) - A Web page that simulates a compass and a speedometer. This works better on mobile simulators rather than just as a plain web page. Not tested yet.
+  * Day #22 (2/16/17) - 
