@@ -39,4 +39,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #21 (2/15/17) - A Web page that simulates a compass and a speedometer. This works better on mobile simulators rather than just as a plain web page. Not tested yet.
   * Day #22 (2/16/17) - A web page that demos a slick highlight animation on links. Pretty simple page and simple script.
   * Day #23 (2/17/17) - A web application that demos speech synthesis using text passed as input from the user.
-  * Day #24 (2/20/17) -
+  * Day #24 (2/20/17) - A web page that demonstrates a fixed navigation menu/bar and a sticky button to go to home immediately. 
+  * Day #25 (2/21/17) - 
