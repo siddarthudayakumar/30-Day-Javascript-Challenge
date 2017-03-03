@@ -40,4 +40,7 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #22 (2/16/17) - A web page that demos a slick highlight animation on links. Pretty simple page and simple script.
   * Day #23 (2/17/17) - A web application that demos speech synthesis using text passed as input from the user.
   * Day #24 (2/20/17) - A web page that demonstrates a fixed navigation menu/bar and a sticky button to go to home immediately. 
-  * Day #25 (2/21/17) - 
+    --Update--
+  Well. I have not updated the repo in a long time nor have I worked on the javascript projects. This is because I had interviews for jobs including an interview with an Internet giant. Now that I'm done with my interviews (Not with my prep), I can work on finishing the 30 day project. :)
+  --Update--
+  * Day #25 (3/2/17) - A web page that demonstrates the bubbling and propagation events in Javascript.  
