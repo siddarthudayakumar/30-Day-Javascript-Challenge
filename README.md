@@ -44,3 +44,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   Well. I have not updated the repo in a long time nor have I worked on the javascript projects. This is because I had interviews for jobs including an interview with an Internet giant. Now that I'm done with my interviews (Not with my prep), I can work on finishing the 30 day project. :)
   --Update--
   * Day #25 (3/2/17) - A web page that demonstrates the bubbling and propagation events in Javascript.  
+  * Day #26 (3/3/17) - A web page that demonstrates a smooth drop down animation that follows along the tabs you explore.
+  * Day #27 (3/4/17) - 
