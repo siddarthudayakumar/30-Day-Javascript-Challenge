@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day 25 project. Sorry for the week long delay.-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<title>Day #25 - Event Capture, Bubbling and Once</title>
+</head>
+
+<body class="main">
+
+	<!--Nested Divs!-->
+	<!--Check Console logs to see how this works-->
+	<div class="first">
+		<div class="second">
+			<div class="third">
+			</div>
+		</div>
+	</div>
+
+	<button></button>
+
+	<script type="text/javascript">
+
+		const divs = document.querySelectorAll('div');
+		const button = document.querySelector('button');
+		
+		//Listening to clicks in all the divs we have
+		function logText(e) {
+			console.log(this.classList.value);
+			//This will stop bubbling
+			//e.stopPropagation(); 
+			//console.log(this);
+		}
+
+		divs.forEach(div => div.addEventListener('click', logText, {
+			capture: false,
+			once: true
+		}));
+
+		button.addEventListener('click', () => {
+			console.log('Clickity-Click');
+		}, {
+			once: true
+		});
+
+	</script>
+
+</body>
+
+</html>

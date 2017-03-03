@@ -1,0 +1,25 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+div {
+	width: 100%;
+	padding: 100px;
+}
+
+.first {
+	background: #2D1E2F;
+}
+
+.second {
+	background: #F72C25;
+}
+
+.third {
+	background: #F7B32B;
+}
+
