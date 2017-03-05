@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day 28 project.-->
+	<!--I'm still learning embedding media and the div tags so please excuse me if I follow the instructions and code to a tee. Thanks, Wes.-->
+	<!--Video taken from Marvel's Guardians of the Galaxy Vol 2 trailer. Because I love the movie and Fleetwood Mac.-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+	<title>Day #28 - Video Speed Controller UI</title>
+</head>
+
+<body>
+
+	<div class= "main">
+		<video class= "flex" width="765" height="430" src="https://www.dropbox.com/s/scspw3wyvtzf7p5/GOTG2.mp4?dl=1" loop controls></video>
+		<div class="speedControl">
+			<div class="controller">1x</div>
+		</div>
+	</div> 
+
+	<script type="text/javascript">
+
+		const speed = document.querySelector('.speedControl');
+  		const bar = speed.querySelector('.controller');
+  		const video = document.querySelector('.flex');
+
+	  	function changeSpeed(e) {
+	    	const y = e.pageY - this.offsetTop;
+	      	const percent = y / this.offsetHeight;
+	      	const min = 0.4;
+	      	const max = 4;
+	      	const height = Math.round(percent * 100) + '%';
+	      	const playbackRate = percent * (max - min) + min;
+	      	bar.style.height = height;
+	      	bar.textContent = playbackRate.toFixed(2) + '×';
+	      	video.playbackRate = playbackRate;
+	    }
+
+  speed.addEventListener('mousemove', changeSpeed);
+
+	</script>
+
+</body>
+
+</html>

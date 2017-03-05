@@ -1,0 +1,41 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #32035E;
+	background-size: cover;
+	font-family: 'Special Elite', cursive;
+}
+
+.main {
+	width: 850px;
+	display: flex;
+}
+
+video {
+	box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.speedControl {
+	background: #F4F4F4;
+	flex: 1;
+	display: flex;
+	align-items: flex-start;
+	margin: 10px;
+	border-radius: 50px;
+	box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.controller {
+	width: 100%;
+	background: #885EAE;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+	color: #F4F4F4;
+	height: 16.3%;
+}
