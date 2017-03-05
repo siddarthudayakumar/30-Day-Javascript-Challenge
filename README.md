@@ -46,4 +46,5 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #25 (3/2/17) - A web page that demonstrates the bubbling and propagation events in Javascript.  
   * Day #26 (3/3/17) - A web page that demonstrates a smooth drop down animation that follows along the tabs you explore.
   * Day #27 (3/4/17) - A web page that demonstrates a click and drag event. Sort of like a colorful horizontal carousel. 
-  * Day #28 (3/5/17) - 
+  * Day #28 (3/5/17) - A web page with a video embedded in it. We use Javascript to slow down or speed up the video using a mouse move event on the controller. 
+  * Day #29 (3/6/17) - 
