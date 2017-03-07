@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--This Mini Project was created for the 30 Day Javascript Challenge by Wes Bos. This is the Day 30 project.-->
+	<!--I'm still learning more to work with styling and coding. I followed the instructions step by step. Thanks, Wes.-->
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+	<title>Day #30 - Whack A Mole</title>
+</head>
+
+<body>
+
+	<h1>Whack A Mole <span class="score"> 0 </span></h1>
+	<button onclick="startGame()">Start!</button>
+
+	<div class="game">
+		<div class="hole no1">
+			<div class="mole"></div>
+		</div>
+		<div class="hole no2">
+			<div class="mole"></div>
+		</div>
+		<div class="hole no3">
+			<div class="mole"></div>
+		</div>
+		<div class="hole no4">
+			<div class="mole"></div>
+		</div>
+		<div class="hole no5">
+			<div class="mole"></div>
+		</div>
+		<div class="hole no6">
+			<div class="mole"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const holes = document.querySelectorAll('.hole');
+	  	const scoreBoard = document.querySelector('.score');
+	  	const moles = document.querySelectorAll('.mole');
+	  	let lastHole;
+	  	let timeUp = false;
+	  	let score = 0;
+
+	  	function randomTime(min, max) {
+	    	return Math.round(Math.random() * (max - min) + min);
+	  	}
+
+	  	//Following function assigns a random hole everytime for the mole
+	  	//Also checks that the same hole is not repeated everytime.
+	  	function randomHole(holes) {
+	    	const idx = Math.floor(Math.random() * holes.length);
+	    	const hole = holes[idx];
+	    	if (hole === lastHole) {
+	      		console.log('Same hole is repeated');
+	      		return randomHole(holes);
+	    	}
+	    	lastHole = hole;
+	    	return hole;
+	  	}
+
+	  	//Following function allows for the mole to peep out of the holes
+	  	function peep() {
+	    	const time = randomTime(200, 1000);
+	    	const hole = randomHole(holes);
+	    	hole.classList.add('up');
+	    	setTimeout(() => {
+	      		hole.classList.remove('up');
+	      		if (!timeUp) peep();
+	    		}, time);
+	  	}
+
+	  	function startGame() {
+	    	scoreBoard.textContent = 0;
+	    	timeUp = false;
+	    	score = 0;
+	    	peep();
+	    	setTimeout(() => timeUp = true, 10000)
+	  	}
+
+	  	function bonk(e) {
+	    	if(!e.isTrusted) return; //Check for cheating
+	    	score++;
+	    	this.classList.remove('up'); //Remove Mole once hit
+	    	scoreBoard.textContent = score; //Update scoreboard
+	  	}
+
+	  	moles.forEach(mole => mole.addEventListener('click', bonk));
+
+ 	</script>
+
+</body>
+
+</html>
