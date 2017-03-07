@@ -1,0 +1,84 @@
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+	background: #FFE66D;
+	font-family: 'Nixie One', cursive;
+	color: #292F36;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	text-align: center;
+	font-family: 'Nixie One', cursive;
+}
+
+.time-left {
+	font-weight: 100;
+	font-size: 20rem;
+	margin: 0;
+	color: #292F36;
+	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.timer {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.controls {
+	display: flex;
+}
+
+.controls > * {
+	flex: 1;
+}
+
+.controls form {
+	flex: 1;
+	display: flex;
+}
+
+.controls input {
+	flex: 1;
+	border: 0;
+	padding: 2rem;
+}
+
+.button {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	color: #292F36;
+	font-size: 2rem;
+	font-weight: 50;
+	text-transform: uppercase;
+	background: rgba(0, 0, 0, 0.1);
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+	font-family: 'Nixie One', cursive;	
+}
+
+.button: hover, 
+.button: focus {
+	background: rgba(0, 0, 0, 0.2);
+	outline: 0;
+}
+
+.display {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.end-time {
+	font-size: 4rem;
+	color: #FFFFFF;
+}
