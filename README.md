@@ -48,4 +48,4 @@ My Daily progress for the 30 Day Javascript Challenge from Wes Bos.
   * Day #27 (3/4/17) - A web page that demonstrates a click and drag event. Sort of like a colorful horizontal carousel. 
   * Day #28 (3/5/17) - A web page with a video embedded in it. We use Javascript to slow down or speed up the video using a mouse move event on the controller. 
   * Day #29 (3/6/17) - Implemented a simple countdown timer on a webpage using Javascript. 
-  * Day #30 (3/7/17) - 
+  * Day #30 (3/7/17) - Implemented a whack-a-mole game using Javascript utilizing random time and random popins using SVG resources.
